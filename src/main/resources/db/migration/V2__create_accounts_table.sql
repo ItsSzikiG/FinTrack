@@ -1,12 +1,12 @@
-Create TABLE accounts
+CREATE TABLE accounts
 (
-    id         uuid PRIMARY KEY,
-    name       text not null,
-    type       text not null,
+    id         BIGSERIAL PRIMARY KEY,
+    name       TEXT NOT NULL,
+    type       TEXT NOT NULL,
     currency   VARCHAR(3),
     balance    NUMERIC(19, 2),
-    user_id    uuid references users (id),
-    created_at timestamptz,
-    updated_at timestamptz
+    user_id    BIGINT REFERENCES users (id),
+    created_at TIMESTAMPTZ,
+    updated_at TIMESTAMPTZ
 );
 

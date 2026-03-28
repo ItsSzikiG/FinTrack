@@ -1,12 +1,12 @@
-Create TABLE users
+CREATE TABLE users
 (
-    id         uuid PRIMARY KEY,
-    first_name varchar(255) NOT NULL,
-    last_name  varchar(255) NOT NULL,
-    email      varchar(255) NOT NULL unique,
-    password   text NOT NULL,
-    role       text NOT NULL,
-    created_at timestamptz,
-    updated_at timestamptz
+    id         BIGSERIAL PRIMARY KEY,
+    first_name VARCHAR(255) NOT NULL,
+    last_name  VARCHAR(255) NOT NULL,
+    email      VARCHAR(255) NOT NULL UNIQUE,
+    password   TEXT         NOT NULL,
+    role       TEXT         NOT NULL,
+    created_at TIMESTAMPTZ,
+    updated_at TIMESTAMPTZ
 );
 
